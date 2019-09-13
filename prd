@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Not normally used (normally started as a service).
+
+export NODE_ENV=production
+
+node server/js/gm.js
+if [ "$?" != "0" ]; then exit 1; fi

@@ -1,0 +1,93 @@
+   <!-- FOOTER -->
+
+   <div id="footer">
+
+      <!-- PROGRESSBAR -->
+
+      <div id="progressbar">
+         <div id="progress"></div>
+      </div>
+
+      <!-- ATTACHMENTBAR -->
+
+      <div id="attachmentbar" class="hvpad hidden">
+         <div class="flex flex-align-center flex-justify-center">
+            <div id="attach_file" class="attachment-type inline-block button-xxlarge icon-xxlarge icon-center icon-file link" attach=""></div>
+            <div class="inline-block button-large"></div>
+            <div id="attach_image" class="attachment-type inline-block button-xxlarge icon-xxlarge icon-center icon-image link" attach="image/*"></div>
+            <div class="inline-block button-large"></div>
+            <div id="attach_audio" class="attachment-type inline-block button-xxlarge icon-xxlarge icon-center icon-audio link" attach="audio/*"></div>
+            <div class="inline-block button-large"></div>
+            <div id="attach_video" class="attachment-type inline-block button-xxlarge icon-xxlarge icon-center icon-video link" attach="video/*"></div>
+         </div>
+      </div>
+
+      <form id="attach_file_form" action="upload" method="post" enctype="multipart/form-data" class="hidden">
+         <input id="attach_file_input" type="file" accept="image/*" multiple>
+         <input id="attach_file_submit" type="submit">
+      </form>
+
+      <!-- EMOJIBAR -->
+
+      <div id="emojibar" class="hidden">
+         <div id="available_emojis" class="flex">
+            <div id="emoji_views" class="hidden"></div>
+            <div id="emoji_view_container" class="flex-expand hvpad-medium align-center">
+               <span id="emoji_view"></span>
+            </div>
+            <!--div id="emoji_sizes" class="flex-fixed hvpad-medium align-center">
+               <img id="emoji_size_1" class="emoji-size-button emoji vpad-medium link" src="emoji/fb/1.0/128/7-symbols/105-31_20e3.png"><br>
+               <img id="emoji_size_2" class="emoji-size-button emoji vpad-medium link" src="emoji/fb/1.0/128/7-symbols/106-32_20e3.png"><br>
+               <img id="emoji_size_3" class="emoji-size-button emoji vpad-medium link" src="emoji/fb/1.0/128/7-symbols/107-33_20e3.png"><br>
+               <img id="emoji_size_4" class="emoji-size-button emoji vpad-medium link" src="emoji/fb/1.0/128/7-symbols/108-34_20e3.png"><br>
+            </div-->
+            <div id="emoji_categories" class="flex-fixed hpad vpad-medium">
+               <img id="emoji_category_smileys"    class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/001-1f62c.png"><br>
+               <img id="emoji_category_animals"    class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/2-animals-and-nature/060-1f408.png"><br>
+               <img id="emoji_category_food"       class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/3-food-and-drink/058-1f374.png"><br>
+               <img id="emoji_category_activities" class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/4-activities/031-1f3ae.png"><br>
+               <img id="emoji_category_travel"     class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/5-travel-and-places/034-2708.png"><br>
+               <img id="emoji_category_objects"    class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/6-objects/005-1f4be.png"><br>
+               <img id="emoji_category_symbols"    class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/7-symbols/055-2753.png"><br>
+               <img id="emoji_category_flags"      class="emoji-category-button emoji vpad-medium link" src="emoji/fb/1.0/128/8-flags/008-1f1e8_1f1e6.png"><br>
+            </div>
+         </div>
+         <div id="common_emojis" class="scroll-auto-x vpad align-center no-wrap">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/001-1f62c.png" alt="😬">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/004-1f603.png" alt="😃">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/022-1f61b.png" alt="😛">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/041-1f62e.png" alt="😮">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/053-1f635.png" alt="😵">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/026-1f610.png" alt="😐">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/035-1f615.png" alt="😕">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/029-1f633.png" alt="😳">
+            <img class="emoji hvpad-medium link" src="emoji/fb/1.0/128/1-smileys-and-people/160-1f48b.png" alt="💋">
+         </div>
+         <!--div id="recent_emojis" class="hpad-medium vpad-border hidden"></div-->
+         <!--div id="custom_emojis" class="hpad-medium vpad-border hidden"></div-->
+      </div>
+
+      <!-- INPUTBAR -->
+
+      <div id="msgbufferbar" class="hidden link-cursor"></div>
+
+      <div id="inputbar">
+         <div class="flex">
+            <div id="attachment_button_container" class="flex-fixed valign-bottom">
+               <button id="attachment_button" class="inputbar-button border-none button-xxlarge icon-xlarge icon-center icon-image"></button><span class="valign-helper-bottom"></span>
+            </div>
+            <div id="msg_body_input_container" class="flex-expand rel-pos">
+               <div id="typing_indicator" class="abs-pos button-xxsmall icon-xxsmall icon-conversations top-right hidden"></div>
+               <!--textarea id="msg_body_input" class="expand" maxlength="1024" placeholder="This is where you write stuff and then wait for the other person to read it and create a giant drama show when they don't reply right away"></textarea-->
+               <span id="msg_body_input" class="block expand-y" contenteditable="true" maxlength="1024" placeholder="This is where you write stuff"></span>
+            </div>
+            <div id="emoji_button_container" class="flex-fixed">
+               <button id="emoji_button" class="inputbar-button border-none button-xxlarge icon-xlarge icon-center icon-emojis"></button><span class="valign-helper-bottom"></span>
+            </div>
+            <div id="send_button_container" class="flex-fixed">
+               <button id="send_button" class="inputbar-button border-none button-xxlarge icon-xlarge icon-center icon-send-msg"></button><span class="valign-helper-bottom"></span>
+            </div>
+         </div>
+      </div>
+
+   </div>

@@ -1,0 +1,71 @@
+
+
+
+$ref-size:             0.9cm;
+$body-width:           $ref-size * 15;
+
+$font-face:            Tahoma, Verdana, Geneva, sans-serif;
+$font-size:            $ref-size / 2;
+$font-face-monospace:  "Less Perfect DOS VGA", Inconsolata, monospaced;
+$font-size-monospace:  12pt; //$ref-size / 2;
+
+$bg-color:             #445544;
+$body-bg-color:        #110011;
+$control-bg-color:     #445544;
+$hover-bg-color:       #FAFAFA;
+$header-bg-color:      #445544;
+$preview-bg-color:     #444444;
+$content-bg-color:     rgba(0, 0, 0, .9);
+$footer-bg-color:      rgba(0, 0, 0, .9); //#223322;
+$text-color:           #EEEEEE;
+//$dim-text-color:       #CCCCCC;
+$disabled-text-color:  #AAAAAA;
+
+$bb-border-color:      #676F73;
+$bb-border-size:       0.29em; // 8px;
+
+$border-color:         $bb-border-color;
+$border-size:          $ref-size  / 10;
+$control-border-color: #CCCCCC;
+$control-border-size:  $ref-size  / 10;
+
+$border-size-thin:     $ref-size  / 20;
+//$border-size-menu:     $ref-size  /  2;
+
+$pad-border:           $border-size;
+$pad-thin:             $font-size /  8;
+$pad-medium:           $font-size /  4;
+$pad-normal:           $font-size /  2;
+$pad-thick:            $font-size;
+
+$link-fg-color:        #BBBBEE;
+$warning-color:        yellow;
+$error-color:          red;
+$important-color:      red;
+$highlight-color:      #FFFFE0;
+
+$src-bg-color:         rgba( 64, 192,  64, .15);
+$dst-bg-color:         rgba(128, 128, 255, .15);
+
+$dialogbox-bg-color:   $bg-color;
+$dialogbox-fg-color:   $text-color;
+
+
+
+// Customizations:
+
+$progressbar-size:     $pad-normal;
+$progressbar-color:    transparent;
+
+//$footer-border:        $pad-normal solid transparent;
+$footer-border:        none;
+
+//$emoji-size:           $ref-size * 0.666;
+//$emoji-size:           $ref-size * 0.941; // 32px;
+
+
+
+@import "app";
+
+
+

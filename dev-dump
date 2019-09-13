@@ -1,0 +1,2 @@
+#!/bin/bash
+mysqldump -u root -n -t -c gc_development > dev-dump.sql

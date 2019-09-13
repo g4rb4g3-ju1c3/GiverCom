@@ -1,0 +1,5 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 48 48">
+<title>Gnome window close</title>
+<desc>http://svn.gnome.org/viewvc/gnome-icon-theme/</desc>
+<path stroke-linejoin="round" d="m13.102 8.405c-1.456-0.01-2.788 0.879-3.339 2.227s-0.212 2.883 0.834 3.896l8.013 8.013-8.013 8.013c-1.398 1.398-1.398 3.666 0 5.064s3.666 1.398 5.064 0l8.014-8.014 8.013 8.014c0.898 0.924 2.204 1.277 3.45 0.945 1.245-0.332 2.241-1.313 2.561-2.561 0.318-1.249-0.067-2.563-1.002-3.45l-8.014-8.014 8.014-8.013c1.056-1.021 1.4-2.6 0.834-3.951-0.563-1.354-1.928-2.205-3.396-2.17-0.93 0.037-1.809 0.437-2.447 1.111l-8.013 8.014-8.014-8.014c-0.666-0.7-1.592-1.102-2.559-1.11z" stroke="#808080" stroke-linecap="round" stroke-width=".8125" fill="#808080"/>
+</svg>

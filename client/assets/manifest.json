@@ -1,0 +1,28 @@
+{
+   "name":        "Give'rCom",
+   "short_name":  "Give'rCom",
+   "version":     "4.2.0",
+   "description": "Chat with crazy people.",
+   "icons": [
+      {
+         "src":   "img/G512.png",
+         "sizes": "512x512",
+         "type":  "image/png"
+      }
+   ],
+   "scope":            "/",
+   "start_url":        "/",
+   "display":          "standalone",
+   "background_color": "#004000",
+   "theme_color":      "#004000",
+   "share_target": {
+      "action": "/share",
+      "method": "post",
+      "enctype": "multipart/form-data",
+      "params": {
+         "title": "title",
+         "text":  "text",
+         "url":   "url"
+      }
+   }
+}

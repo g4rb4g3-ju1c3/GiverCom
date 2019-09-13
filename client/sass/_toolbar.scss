@@ -1,0 +1,41 @@
+
+
+
+.toolbar {
+   cursor:           default;
+   padding:          0 $pad-normal;
+   background-color: $control-bg-color;
+   white-space:      nowrap;
+
+   input, button, textarea, select {
+      border: none;
+   }
+
+   button {
+      padding: 0;
+   }
+}
+
+.toolbar-button {
+   cursor:              pointer;
+}
+
+.button-large { @extend .toolbar-button;
+   min-width:           2em;
+   min-height:          2em;
+   line-height:         2em;
+   background-size:     100%;
+   background-position: center;
+}
+
+.button-large-text { @extend .toolbar-button;
+   min-height:          2em;
+   line-height:         2em;
+   padding-left:        2.25em;
+   padding-right:       $pad-normal;
+   background-size:     auto 100%;
+   background-position: $pad-medium center;
+}
+
+
+

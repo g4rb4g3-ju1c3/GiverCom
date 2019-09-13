@@ -1,0 +1,3 @@
+#!/bin/bash
+#node-sass -w client/sass/ -o client/assets/css/
+node-sass --output-style compressed --source-map true -w client/sass/ -o client/assets/css/

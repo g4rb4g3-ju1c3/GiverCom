@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export NODE_ENV=development
+
+# Use gm-watch-css instead.
+#node-sass client/sass/ -o client/assets/css/
+##npm run sass
+#if [ "$?" != "0" ]; then exit 1; fi
+
+#node --throw-deprecation server/js/gm.js
+#if [ "$?" != "0" ]; then exit 1; fi
+
+# If the script is omitted, nodemon will try to read "main" from package.json
+#nodemon -V -w server/js/app.js server/js/gm.js --throw-deprecation
+nodemon -V -w server/js/app.js --throw-deprecation
+#nodemon -V -w nothing --throw-deprecation
+if [ "$?" != "0" ]; then exit 1; fi

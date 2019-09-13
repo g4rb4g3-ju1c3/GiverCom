@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+
+<head>
+
+   <title><%- app_name %></title>
+
+   <meta name="app_name"        content="<%- app_name        %>">
+   <meta name="app_version"     content="<%- app_version     %>">
+   <meta name="app_author"      content="<%- app_author      %>">
+   <meta name="app_copyright"   content="<%- app_copyright   %>">
+   <meta name="app_description" content="<%- app_description %>">
+   <meta name="app_device_type" content="<%- app_device_type %>">
+
+   <meta name="description" content="<%- app_description %>">
+   <meta name="viewport"    content="width=device-width, height=device-height, initial-scale=1">
+   <meta name="theme-color" content="#445544">
+
+   <link rel="manifest" href="manifest.json" />
+
+   <link rel="icon" type="image/png" href="img/G16.png" />
+
+<!--% if (device_type == "bb10") { -%-->
+   <!--link id="css_link" rel="stylesheet" type="text/css" href="css/bb10.css" /-->
+<!--% } else { -%-->
+   <link id="css_link" rel="stylesheet" type="text/css" href="css/normal.css" />
+<!--% } -%-->
+   <style id="dynamic_styles" type="text/css"></style>
+
+   <script type="text/javascript" src="js/lib/jquery.min.js"           ></script>
+   <script type="text/javascript" src="js/lib/moment.min.js"           ></script>
+   <!--script type="text/javascript" src="js/lib/imagesloaded.pkgd.min.js"></script-->
+
+<% if (!APP_ENV_DEVELOPMENT) { -%>
+   <script type="text/javascript" src="js/app.min.js"                   ></script>
+<% } else { -%>
+   <meta name="app_env_development" content="true">
+
+   <!--script type="text/javascript" src="js/app/constants.js"            ></script-->
+   <script type="text/javascript" src="js/app/00-global.js"            ></script>
+   <script type="text/javascript" src="js/app/01-log.js"               ></script>
+   <script type="text/javascript" src="js/app/02-debug.js"             ></script>
+
+   <script type="text/javascript" src="js/app/10-app.js"               ></script>
+   <script type="text/javascript" src="js/app/11-sw.js"                ></script>
+   <script type="text/javascript" src="js/app/12-ws.js"                ></script>
+   <script type="text/javascript" src="js/app/15-dialogbox.js"         ></script>
+   <script type="text/javascript" src="js/app/16-checkbox.js"          ></script>
+   <!--script type="text/javascript" src="js/app/17-scroll.js"            ></script-->
+   <!--script type="text/javascript" src="js/app/19-io.js"                ></script-->
+
+   <script type="text/javascript" src="js/app/20-ui.js"                ></script>
+   <script type="text/javascript" src="js/app/21-header.js"            ></script>
+   <script type="text/javascript" src="js/app/22-footer.js"            ></script>
+   <script type="text/javascript" src="js/app/23-menu.js"              ></script>
+   <script type="text/javascript" src="js/app/24-settings.js"          ></script>
+   <script type="text/javascript" src="js/app/25-lightbox.js"          ></script>
+
+   <script type="text/javascript" src="js/app/30-login.js"             ></script>
+   <script type="text/javascript" src="js/app/31-notification.js"      ></script>
+   <script type="text/javascript" src="js/app/32-conversation.js"      ></script>
+   <script type="text/javascript" src="js/app/33-message.js"           ></script>
+   <script type="text/javascript" src="js/app/34-attach.js"            ></script>
+   <script type="text/javascript" src="js/app/35-emoji.js"             ></script>
+
+   <script type="text/javascript" src="js/app/40-special.js"           ></script>
+<% } -%>
+
+</head>
+
+<body>
+
+   <div id="load_indicator" class="hidden"></div>
+
+   <div id="page_cover"></div>
+
+<% include partials/header -%>
+
+<% include partials/footer -%>
+
+<% include partials/menu -%>
+
+   <!-- CONTENT -->
+
+   <div id="content_scroll">
+   <div id="content"></div>
+   </div>
+
+   <!-- CONTENT HOLDING -->
+
+   <div id="content_holding" class="hidden">
+
+      <div id="welcome"></div>
+
+      <div id="conversation"></div>
+
+<% include partials/popup -%>
+
+<% include partials/settings -%>
+
+   </div>
+
+   <div id="templates" class="hidden">
+
+<% include partials/templates -%>
+
+   </div>
+
+   <!-- DIALOG BOX HOLDING -->
+
+   <div id="dialogboxes"></div>
+
+<% include partials/lightbox -%>
+
+   <a id="log_download" class="hidden" download=""></a>
+
+</body>
+
+</html>

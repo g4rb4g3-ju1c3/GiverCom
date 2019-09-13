@@ -1,0 +1,134 @@
+      <!-- SETTINGS -->
+
+      <div id="app_settings">
+         <div id="app_settings_content" class="hvpad cursor-default">
+
+            <div class="section-heading pad-bottom h1">Profile<div id="help_profile_settings" class="float-right button-xsmall icon-xsmall icon-help link"></div></div>
+            <div id="profile" class="pad-bottom hidden">
+               <span class="st1">You must enter your password to change anything in this section.<br>
+               Leave new password blank if you don't want to change it.<br><br></span>
+               <div class="table" class="pad-top">
+                  <div class="table-row">
+                     <div class="table-cell">Current password&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_password" type="password" maxlength="30"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell">Username&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_username" type="text" maxlength="30"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell">New password&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_new_password" type="password" maxlength="30"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell">Confirm password&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_confirm_password" type="password" maxlength="30"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell">Display name&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_display_name" type="text" maxlength="100"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell">Avatar&nbsp;&nbsp;</div>
+                     <div class="table-cell"><input id="settings_profile_avatar" type="text" maxlength="256"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell"></div>
+                     <div class="table-cell"><img id="settings_profile_avatar_preview" class="block link" src="img/avatars/879px-Grammar_Nazi_Icon_Text_Bcg.svg.png"></div>
+                  </div>
+               </div>
+               <div class="pad-top">
+                  <label><input type="checkbox" id="settings_profile_public"> Show in phone book</label>
+               </div>
+            </div>
+
+            <div class="section-heading vpad h1">Display<div id="settings_display_help" class="float-right button-xsmall icon-xsmall icon-help link"></div></div>
+            <div id="settings_display" class="pad-bottom hidden">
+               <div class="table" class="pad-top">
+                  <div class="table-row">
+                     <div class="table-cell"><label for="settings_display_theme">Theme&nbsp;&nbsp;</label></div>
+                     <div class="table-cell">
+                        <select id="settings_display_theme">
+                           <option value="1337">1337</option>
+                           <option value="BBM">BBM</option>
+                           <option value="Android">Android</option>
+                           <option value="iFruit">iFruit</option>
+                           <option value="Assbook">Assbook</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell"><label for="settings_display_background_wallpaper">Background wallpaper&nbsp;&nbsp;</label></div>
+                     <div class="table-cell"><input id="settings_display_background_wallpaper" class="expand-x" maxlength="256"></div>
+                  </div>
+                  <div class="table-row">
+                     <div class="table-cell"><label for="settings_display_background_color">Background colour&nbsp;&nbsp;</label></div>
+                     <div class="table-cell">
+                        <div class="flex">
+                           <input id="settings_display_background_color" class="pad-right" maxlength="7">&nbsp;&nbsp;
+                           <input id="settings_display_background_color_picker" type="color">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_large_titlebar"> Large title bar</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_message_headers"> Display message headers</label></div>
+               <div class="vpad-medium"><label>Timestamp format&nbsp;&nbsp;<input id="settings_display_timestamp_format" class="inline-block" maxlength="30"></label></div>
+               <br>
+               <!--select id="timestamp_format"">
+                  <option value="YYYY-MM-DD ddd HH:mm:ss">1999-04-20 Fri 16:20:00</option>
+                  <option value="YYYY-MM-DD HH:mm:ss">1999-04-20 16:20:00</option>
+                  <option value="ddd HH:mm:ss">Fri 16:20:00</option>
+                  <option value="ddd HH:mm">Fri 16:20</option>
+                  <option value="ddd hh:mm">Fri 4:20pm</option>
+               </select><br-->
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_avatars"> Show avatars</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_always_show_common_emojis"> Show common emoji bar</label></div>
+               <!--div class="vpad-medium"><label><input type="checkbox" id="settings_display_always_show_recent_emojis"> Always show recent emoji bar</label></div-->
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_single_click_emojis"> Single click to send emojis</label></div>
+               <div class="vpad-medium">
+                  <label>Emoji scale
+                  <select id="settings_display_emoji_scale" style="width: 7em;">
+                     <option value="tiny">Tiny</option>
+                     <option value="small">Small</option>
+                     <option value="medium">Medium</option>
+                     <option value="large">Large</option>
+                  </select>
+                  </label>
+               </div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_display_special_fx"> Special FX</label></div>
+            </div>
+
+            <div class="section-heading vpad h1">Messages<div id="settings_messages_help" class="float-right button-xsmall icon-xsmall icon-help link"></div></div>
+            <div id="settings_messages" class="pad-bottom hidden">
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_send_on_enter"> Enter to send</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_send_button"> Show send button</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_emoji_button"> Show emoji button</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_show_others_typing"> Show that others are typing</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_tell_others_typing"> Show others that you are typing</label></div>
+               <div class="vpad-medium inline-block"><label><input type="checkbox" id="settings_messages_notifications"> New message notifications</label></div>&nbsp;&nbsp;
+               <button id="test_notifications" class="inline-block">Super duper test button</button><br>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_notifications_show_content"> Show message content in notifications</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_previews"> New message previews</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_new_msg_indicator"> Show new message indicator in page title</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_delivery_confirmation"> Send delivery confirmation</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_read_on_mousemove"> Read new messages on mouse movement</label></div>
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_messages_read_on_typing"> Read new messages on typing</label></div>
+            </div>
+
+            <div class="section-heading vpad h1">Media<div id="settings_media_help" class="float-right button-xsmall icon-xsmall icon-help link"></div></div>
+            <div id="settings_media" class="pad-bottom hidden">
+               <!--div class="vpad-medium"><label><input type="checkbox" id="settings_media_audio"> Enable sound</label></div-->
+               <!--div class="vpad-medium"><label><input type="checkbox" id="settings_media_video"> Enable video</label></div-->
+               <!--div class="vpad-medium"><label><input type="checkbox" id="settings_media_click_to_load"> Click to load</label></div-->
+               <div class="vpad-medium"><label><input type="checkbox" id="settings_media_show_filename"> Show filename</label></div>
+               <!--div class="vpad-medium"><label><input type="checkbox" id="settings_media_show_info"> Show info</label></div-->
+            </div>
+
+            <!--div class="section-heading vpad h1">Testing<div id="settings_test_help" class="float-right button-xsmall icon-xsmall icon-help link"></div></div>
+            <div id="settings_test" class="hidden">
+               <div class="vpad-medium"><label class="disabled"><input type="checkbox" disabled> Disabled checkbox</label></div>
+            </div-->
+
+         </div>
+      </div>

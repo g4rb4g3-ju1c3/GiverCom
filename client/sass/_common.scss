@@ -1,0 +1,661 @@
+
+
+
+.hidden {
+   display:          none;
+}
+
+.inline {
+   display:          inline;
+}
+
+.inline-block {
+   display:          inline-block;
+}
+
+.block {
+   display:          block;
+}
+
+.flex {
+   display:          flex;
+}
+
+.flex-row {
+   flex-direction:   row;
+}
+
+.flex-column {
+   flex-direction:   column;
+}
+
+.flex-wrap {
+   flex-flow:        wrap;
+}
+
+.flex-align-center {
+   align-items:      center;
+}
+
+.flex-fixed {
+   flex:             0 0 auto;
+}
+
+.flex-expand {
+   flex:             1 0 auto;
+   width:            0;
+}
+
+.flex-expand-y {
+   flex:             1 0 auto;
+   height:           0;
+}
+
+.flex-justify-center {
+   justify-content:  center;
+}
+
+
+
+.float-left {
+   display:          block;
+   float:            left;
+}
+
+.float-right {
+   display:          block;
+   float:            right;
+}
+
+/*
+.clear-left {
+   clear:            left;
+}
+
+.clear-right {
+   clear:            right;
+}
+
+.clear-both {
+   clear:            both;
+}
+*/
+
+
+
+.fixed-pos {
+   position:         fixed;
+}
+
+.abs-pos {
+   position:         absolute;
+}
+
+.rel-pos {
+   position:         relative;
+}
+
+
+
+.top {
+   top:              0;
+}
+
+.bottom {
+   bottom:           0;
+}
+
+.left {
+   left:             0;
+}
+
+.right {
+   right:            0;
+}
+
+.top-left {
+   top:              0;
+   left:             0;
+}
+
+.top-right {
+   top:              0;
+   right:            0;
+}
+
+.bottom-left {
+   bottom:           0;
+   left:             0;
+}
+
+.bottom-right {
+   bottom:           0;
+   right:            0;
+}
+
+.fill {
+   top:              0;
+   bottom:           0;
+   left:             0;
+   right:            0;
+}
+
+
+
+.expand-x {
+   width:            100%;
+}
+
+.expand-y {
+   height:           100%;
+}
+
+.expand {
+   width:            100%;
+   height:           100%;
+}
+
+
+
+.scroll-auto-x {
+   overflow-x:       auto;
+}
+
+.scroll-auto-y {
+   overflow-y:       auto;
+}
+
+.scroll-auto {
+   overflow:         auto;
+}
+
+.scroll-x {
+   overflow-x:       scroll;
+}
+
+.scroll-y {
+   overflow-y:       scroll;
+}
+
+.scroll {
+   overflow:         scroll;
+}
+
+.noclip {
+   overflow:         visible;
+}
+
+
+
+.truncate {
+   white-space:      nowrap;
+   overflow:         hidden;
+}
+
+.no-wrap {
+   white-space:      nowrap;
+}
+
+.pre {
+   white-space:      pre;
+}
+
+.pre-break-word {
+   white-space:      pre-wrap;
+   overflow-wrap:    break-word;
+}
+
+.ellipsis {
+   text-overflow:    ellipsis;
+}
+
+
+
+.align-left {
+   text-align:       left;
+}
+
+.align-center {
+   text-align:       center;
+}
+
+.align-right {
+   text-align:       right;
+}
+
+
+
+.valign-top {
+   vertical-align:   top;
+}
+
+.valign-middle {
+   vertical-align:   middle;
+}
+
+.valign-bottom {
+   vertical-align:   bottom;
+}
+
+
+
+.valign-helper-top {
+   display:          inline-block;
+   height:           100%;
+   vertical-align:   top;
+}
+
+.valign-helper-middle {
+   display:          inline-block;
+   height:           100%;
+   vertical-align:   middle;
+}
+
+.valign-helper-bottom {
+   display:          inline-block;
+   height:           100%;
+   vertical-align:   bottom;
+}
+
+
+
+h1, .h1 {
+   display:          inline;
+   font-size:        125%;
+   font-weight:      bold;
+}
+
+h2, .h2 {
+   @extend .h1;
+   font-size:        100%;
+}
+
+h3, .h3 {
+   @extend .h1;
+   font-size:        75%;
+}
+
+h4, .h4 {
+   @extend .h1;
+   font-size:        50%;
+}
+
+
+
+.st1 {
+   font-size:        75%;
+}
+
+.st2 {
+   font-size:        50%;
+}
+
+.st3 {
+   font-size:        35%;
+}
+
+
+
+.font166 {
+   font-size:        166%;
+}
+
+.font150 {
+   font-size:        150%;
+}
+
+.font133 {
+   font-size:        133%;
+}
+
+.font75 {
+   font-size:        75%;
+}
+
+.font66 {
+   font-size:        66%;
+}
+
+.font50 {
+   font-size:        50%;
+}
+
+.font33 {
+   font-size:        33%;
+}
+
+.font25 {
+   font-size:        25%;
+}
+
+
+
+.monospace {
+   font-family:      monospace;
+}
+
+.bold {
+   font-weight:      bold;
+}
+
+.italic {
+   font-style:       italic;
+}
+
+.strikethrough {
+   text-decoration:  line-through;
+}
+
+.overline {
+   text-decoration:  overline;
+}
+
+.underline {
+   text-decoration:  underline;
+}
+
+
+
+.click-through {
+   pointer-events:   none;
+}
+
+.cursor-default {
+   cursor:           default;
+}
+
+.link {
+   color:            $link-fg-color;
+   cursor:           pointer;
+}
+
+.link-fg {
+   color:            $link-fg-color;
+}
+
+.link-cursor {
+   cursor:           pointer;
+}
+
+.enable-hover:hover {
+   background-color: $hover-bg-color;
+}
+
+.important {
+   color:            $important-color;
+}
+
+.warning {
+   color:            $warning-color !important;
+}
+
+.error {
+   color:            $error-color !important;
+}
+
+.dim75 {
+   opacity:          0.75;
+}
+
+.dim50 {
+   opacity:          0.50;
+}
+
+.dim25 {
+   opacity:          0.25;
+}
+
+.disabled {
+   color:            $disabled-text-color;
+}
+
+.dialog-highlight {
+   color:            $link-fg-color;
+}
+
+.highlight {
+   background-color: $highlight-color !important;
+}
+
+
+
+.border-none {
+   border:           0;
+}
+
+.border-top {
+   border-top:       $border-size solid $border-color;
+}
+
+.border-bottom {
+   border-bottom:    $border-size solid $border-color;
+}
+
+.border-left {
+   border-left:      $border-size solid $border-color;
+}
+
+.border-right {
+   border-right:     $border-size solid $border-color;
+}
+
+.border-thin-top {
+   border-top:       $border-size-thin solid $control-border-color;
+}
+
+.border-thin-bottom {
+   border-bottom:    $border-size-thin solid $control-border-color;
+}
+
+.border-thin-left {
+   border-left:      $border-size-thin solid $control-border-color;
+}
+
+.border-thin-right {
+   border-right:     $border-size-thin solid $control-border-color;
+}
+
+.control-border {
+   border:           $control-border-size solid $control-border-color;
+}
+
+.control-border-top {
+   border-top:       $control-border-size solid $control-border-color;
+}
+
+.control-border-bottom {
+   border-bottom:    $control-border-size solid $control-border-color;
+}
+
+.control-border-left {
+   border-left:      $control-border-size solid $control-border-color;
+}
+
+.control-border-right {
+   border-right:     $control-border-size solid $control-border-color;
+}
+
+.bb-border-top {
+   border-top:       $bb-border-size solid $bb-border-color;
+}
+
+.bb-border-bottom {
+   border-bottom:    $bb-border-size solid $bb-border-color;
+}
+
+
+
+.hvpad {
+   padding:          $pad-normal;
+}
+.hvpad-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.hvpad-medium {
+   padding:          $pad-medium;
+}
+.hvpad-border {
+   padding:          $pad-border;
+}
+
+.hpad {
+   padding-left:     $pad-normal;
+   padding-right:    $pad-normal;
+}
+.hpad-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.hpad-medium {
+   padding-left:     $pad-medium;
+   padding-right:    $pad-medium;
+}
+.hpad-border {
+   padding-left:     $pad-border;
+   padding-right:    $pad-border;
+}
+
+.vpad {
+   padding-top:      $pad-normal;
+   padding-bottom:   $pad-normal;
+}
+.vpad-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.vpad-medium {
+   padding-top:      $pad-medium;
+   padding-bottom:   $pad-medium;
+}
+.vpad-border {
+   padding-top:      $pad-border;
+   padding-bottom:   $pad-border;
+}
+
+.pad-top {
+   padding-top:      $pad-normal;
+}
+.pad-top-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.pad-top-medium {
+   padding-top:      $pad-medium;
+}
+.pad-top-border {
+   padding-top:      $pad-border;
+}
+
+.pad-bottom {
+   padding-bottom:   $pad-normal;
+}
+.pad-bottom-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.pad-bottom-medium {
+   padding-bottom:   $pad-medium;
+}
+.pad-bottom-border {
+   padding-bottom:   $pad-border;
+}
+
+.pad-left {
+   padding-left:     $pad-normal;
+}
+.pad-left-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.pad-left-medium {
+   padding-left:     $pad-medium;
+}
+.pad-left-border {
+   padding-left:     $pad-border;
+}
+
+.pad-right {
+   padding-right:    $pad-normal;
+}
+.pad-right-thin {
+   padding-left:     $pad-thin;
+   padding-right:    $pad-thin;
+}
+.pad-right-medium {
+   padding-right:    $pad-medium;
+}
+.pad-right-border {
+   padding-right:    $pad-border;
+}
+
+
+
+.table {
+   display:          table;
+}
+
+.table-row {
+   display:          table-row;
+}
+
+.table-cell {
+   display:          table-cell;
+}
+
+.table-cell:first-child {
+   padding-left:     0;
+}
+
+.table-cell:last-child {
+   padding-right:    0;
+}
+
+
+
+@mixin mirror {
+   transform:         scaleX(-1);
+   -moz-transform:    scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   -o-transform:      scaleX(-1);
+   -ms-transform:     scaleX(-1);
+}
+
+@mixin flip {
+   transform:         scaleY(-1);
+   -moz-transform:    scaleY(-1);
+   -webkit-transform: scaleY(-1);
+   -o-transform:      scaleY(-1);
+   -ms-transform:     scaleY(-1);
+}
+
+@mixin scale-y($factor) {
+   transform:         scaleY($factor);
+   -moz-transform:    scaleY($factor);
+   -webkit-transform: scaleY($factor);
+   -o-transform:      scaleY($factor);
+   -ms-transform:     scaleY($factor);
+}
+
+@mixin rotate($angle) {
+   transform:         rotate($angle);
+   -moz-transform:    rotate($angle);
+   -webkit-transform: rotate($angle);
+   -o-transform:      rotate($angle);
+   -ms-transform:     rotate($angle);
+}
+
+.rotate90 {
+   @include rotate(90deg);
+}
+
+.rotate180 {
+   @include rotate(180deg);
+}
+
+.rotate270, .rotate-90 {
+   @include rotate(270deg);
+}
+
+
+

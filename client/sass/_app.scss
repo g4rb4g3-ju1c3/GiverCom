@@ -1,0 +1,783 @@
+
+
+
+@import "common";
+@import "controls";
+@import "buttons";
+@import "icons";
+//@import "toolbar";
+//@import "list";
+@import "debug";
+
+
+
+/*************************/
+/*** GLOBAL EVERYTHING ***/
+/*************************/
+
+
+
+* {
+   margin:           0;
+   padding:          0;
+}
+
+// Fixes Chrome not doing background-size 100% 100%:
+html {
+   height:           100%;
+}
+
+body {
+   background-color: black;
+   color:            $text-color;
+   font:             $font-size $font-face;
+   // Prevent the pull down refresh feature in Android Chrome:
+   overflow-y:       hidden;
+}
+
+a {
+   color:            $link-fg-color;
+   text-decoration:  none;
+}
+
+hr {
+   margin:           $pad-medium 0;
+   border:           ($border-size / 2) solid $border-color;
+}
+
+div {
+   -webkit-overflow-scrolling: touch;
+   box-sizing:       border-box;
+   font:             inherit;
+}
+
+
+
+/*******************/
+/*** PAGE STYLES ***/
+/*******************/
+
+
+
+#load_indicator {
+   z-index:          9999;
+   pointer-events:   none;
+   position:         absolute;
+   top:              0;
+   bottom:           0;
+   left:             0;
+   right:            0;
+   margin:           auto;
+   max-width:        6em;
+   max-height:       4em;
+   border-radius:    1em;
+   background:       rgba(255, 255, 0, 0.25) url("../img/icons/content-loading-symbolic.svg") center / 50% no-repeat;
+}
+
+
+
+#page_cover {
+   z-index:          8888;
+   position:         fixed;
+   top:              0;
+   bottom:           0;
+   left:             0;
+   right:            0;
+   background-color: $header-bg-color;
+}
+
+
+
+/*
+#ping_status {
+   z-index:          6969;
+   position:         fixed;
+   top:              2em;
+   left:             0;
+//   width:            10%;
+//   min-height:       1.75em;
+   padding:          0.25em;
+//   background-color: rgba(0, 0, 0, 0.75);
+   color:            yellow;
+}
+*/
+
+
+
+#header {
+   z-index:          2;
+   position:         fixed;
+   top:              0;
+   left:             0;
+   right:            0;
+   width:            100%;
+   max-width:        $body-width;
+   margin:           0 auto;
+   text-align:       left;
+   background-color: $header-bg-color;
+//   box-shadow:       0 -3em 3em 2em black;
+
+   #titlebar {
+      width:            100%;
+      height:           auto;
+      padding-right:    3.5em;
+
+      #subtitle {
+         color:            lightgrey;
+      }
+   }
+
+   #titlebar_min {
+      width:            100%;
+      padding:          $pad-border;
+      padding-right:    3.5em;
+      color:            lightgrey;
+   }
+
+   #toolbar {
+      max-width:        $body-width;
+      background-color: $bg-color;
+   }
+
+   #previewbar {
+      cursor:           default;
+      max-height:       4em;
+      overflow:         hidden;
+      background-color: $preview-bg-color;
+//      opacity:          0.5;
+   }
+}
+
+#header.disconnected {
+   background-color:    #440000;
+}
+
+
+
+#hamburger_button {
+   z-index:          668;
+   position:         absolute;
+   top:              0;
+   right:            0;
+   width:            3.5em;
+   height:           2.75em;
+   border-radius:    0.25em;
+   margin:           0.25em;
+   background:       rgba(0, 0, 0, 0.3) url("../img/icons/PEO-hamburger.svg") center / 3em no-repeat;
+//   box-shadow:       0 -3em 3em 2em yellow;
+}
+
+#hamburger_menu {
+   z-index:          669;
+
+   #hamburger_menu_container {
+      position:         absolute;
+      top:              0;
+      left:             0;
+      right:            0;
+      width:            100%;
+      max-width:        $body-width;
+      margin:           0 auto;
+
+      #hamburger_menu_content {
+         position:         absolute;
+         top:              1em;
+         right:            1em;
+         background-color: $bg-color;
+         font-size:        150%;
+         font-weight:      bold;
+
+         #hamburger_menu_username {
+            max-width:        100%;
+         }
+
+         .hamburger-menu-item {
+            padding:          $pad-border 0;
+            white-space:      nowrap;
+         }
+
+         .divider {
+            border-bottom:    $border-size-thin solid $border-color;
+         }
+      }
+   }
+}
+
+
+
+#content_scroll {
+   position:         fixed;
+   z-index:          1;
+   top:              0;
+   left:             0;
+   bottom:           0;
+   right:            0;
+   overflow-y:       scroll;
+   background-color: transparent;
+
+   #content {
+      margin:           0 auto;
+      max-width:        $body-width;
+      text-align:       left;
+      background-color: $content-bg-color;
+//      box-shadow:       0 0 3em 2em black;
+   }
+}
+
+
+
+#welcome {
+   background:       $header-bg-color url("../img/G512.png") center / 75% no-repeat;
+}
+
+
+
+#conversation {
+   display:          flex;
+   justify-content:  flex-end;
+   flex-direction:   column;
+   background-color: transparent;
+
+   .msg-load-links {
+      padding:          $pad-normal 0;
+      text-align:       center;
+      font-size:        75%;
+   }
+
+   .date-header {
+      padding:          $pad-normal 0;
+      color:            #FFFFEE;
+      text-align:       center;
+
+      .date-month-year {
+         padding-top:      $pad-medium;
+         background-color: rgba(255, 255, 255, 0.1);
+         font-size:        120%;
+      }
+
+      .date-day {
+         padding:          $pad-medium 0;
+         background-color: rgba(255, 255, 255, 0.1);
+         font-size:        85%;
+      }
+   }
+
+   .message-group {
+      padding:          $pad-medium 0;
+
+      .msg-time {
+         font-size:        66%;
+         opacity:          0.5;
+      }
+
+      .msg-time:first-child {
+         padding:          0 $pad-normal $border-size;
+      }
+
+      .msg-time:last-child {
+         padding:          $border-size $pad-normal 0;
+      }
+
+      .msg-status {
+         width:            2em;
+         height:           1.25em;
+//         margin:           0 $pad-normal;
+//         padding:          0 $pad-normal;
+         background-size:  0.85em;
+      }
+
+      .msg-status-sending {
+         opacity:          0.5;
+      }
+
+//      .msg-content {
+         .msg-info {
+            color:            #FFFFAA;
+         }
+
+         .msg-body {
+            width:            100%;
+            overflow-wrap:    break-word;
+
+            .media-container {
+               padding-top:         $border-size;
+
+               * {
+                  vertical-align:      bottom;
+               }
+
+               .media-icon {
+                  display:          block;
+                  cursor:           pointer;
+                  max-width:        3em;
+                  width:            100%;
+                  margin:           0 auto;
+               }
+
+               .media-poster {
+                  display:          block;
+                  cursor:           pointer;
+                  width:            100%;
+               }
+            }
+
+            .media-item {
+               max-width:        100%;
+            }
+
+            img.media-item {
+               cursor:           pointer;
+               max-width:        100%;
+               max-height:       20em;
+            }
+
+            audio.media-item {
+               width:            100%;
+            }
+
+            video.media-item {
+               width:            100%;
+            }
+
+            .media-item-name {
+               padding-top:      $pad-medium;
+               padding-bottom:   $pad-normal;
+               color:            lightgrey;
+               font-size:        75%;
+            }
+         }
+//      }
+   }
+
+   .message-group.src-msg {
+      margin-right:     $pad-thick * 2;
+      background-color: $src-bg-color;
+   }
+
+   .message-group.dst-msg {
+      margin-left:      $pad-thick * 2;
+      background-color: $dst-bg-color;
+   }
+}
+
+.msg-time-spacer {
+   width:            100%;
+}
+
+.msg-time-spacer-1 {
+   @extend .msg-time-spacer;
+   height:           $pad-normal * 1;
+}
+
+.msg-time-spacer-2 {
+   @extend .msg-time-spacer;
+   height:           $pad-normal * 2;
+}
+
+.msg-time-spacer-3 {
+   @extend .msg-time-spacer;
+   height:           $pad-normal * 3;
+}
+
+.msg-time-spacer-4 {
+   @extend .msg-time-spacer;
+   height:           $pad-normal * 4;
+}
+
+
+
+#footer {
+   z-index:          3;
+   position:         fixed;
+   left:             0;
+   right:            0;
+   bottom:           0;
+   width:            100%;
+   max-width:        $body-width;
+   height:           auto;
+   margin:           0 auto;
+   border-bottom:    $footer-border;
+   background-color: $footer-bg-color;
+//   box-shadow:       0 3em 3em 2em black;
+
+   #emojibar {
+
+      #available_emojis {
+
+         max-height:       100%;
+
+         #emoji_categories {
+            margin-left:      $pad-normal;
+            overflow-y:       scroll;
+            background-color: $dst-bg-color;
+         }
+
+         #emoji_view_container {
+            overflow-x:       hidden;
+            overflow-y:       scroll;
+            background-color: $src-bg-color;
+            text-align:       center;
+         }
+      }
+
+/*
+      #recent_emojis {
+         overflow-x:       scroll;
+         overflow-y:       hidden;
+      }
+
+      #custom_emojis {
+         overflow-x:       scroll;
+         overflow-y:       hidden;
+      }
+*/
+   }
+
+   #progressbar {
+      width:            100%;
+      height:           $progressbar-size;
+      background-color: $progressbar-color;
+
+      #progress {
+         width:            0;
+         height:           100%;
+         background-color: #99CC99;
+      }
+   }
+
+   #msgbufferbar {
+      width:            100%;
+      min-height:       1em;
+      max-height:       3em;
+      margin-bottom:    $pad-border;
+      padding:          $pad-medium $pad-normal;
+      background-color: $src-bg-color;
+      opacity:          0.8;
+      white-space:      nowrap;
+      overflow:         hidden;
+      text-overflow:    ellipsis;
+   }
+
+   #inputbar {
+      display:          none;
+      width:            100%;
+      height:           auto;
+      max-width:        $body-width;
+
+      .inputbar-button {
+//         width:            3.5em;
+//         height:           3.5em;
+         background-color: transparent;
+      }
+
+      #msg_body_input_container{
+//         border-left:      $border-size solid #111111;
+//         border-right:     $border-size solid #111111;
+         background-color: $src-bg-color;
+      }
+
+      #msg_body_input {
+         max-height:       10em;
+         box-sizing:       border-box;
+         outline:          none;
+         overflow-y:       auto;
+//         max-height:       7 * $font-size;
+         padding:          $pad-border $pad-medium;
+         white-space:      pre-wrap;
+         overflow-wrap:    break-word;
+      }
+   }
+}
+
+
+
+/*
+// .emoji set dynamically in 35-emoji.js:
+
+.emoji {
+   display:          inline;
+   width:            $emoji-size;
+   height:           $emoji-size;
+   vertical-align:   middle;
+}
+*/
+
+#msg_body_input, .msg-body {
+
+   .emoji {
+      padding:          $pad-thin;
+   }
+
+   .emoji:first-child {
+      padding:          $pad-thin $pad-thin $pad-thin 0;
+   }
+}
+
+/*
+.emoji-16 {
+   width:            16px * $scale-size;
+   height:           16px * $scale-size;
+   vertical-align:   middle;
+}
+
+.emoji-32 {
+   width:            32px * $scale-size;
+   height:           32px * $scale-size;
+   vertical-align:   middle;
+}
+
+.emoji-64 {
+   width:            64px * $scale-size;
+   height:           64px * $scale-size;
+   vertical-align:   middle;
+}
+
+.emoji-128 {
+   width:            128px * $scale-size;
+   height:           128px * $scale-size;
+   vertical-align:   middle;
+}
+
+.emoji-256 {
+   width:            256px * $scale-size;
+   height:           256px * $scale-size;
+   vertical-align:   middle;
+}
+*/
+
+
+
+.popup-bg {
+   display:          none;
+   position:         fixed;
+   top:              0;
+   left:             0;
+   bottom:           0;
+   right:            0;
+   background-color: transparent;
+   outline:          none;
+}
+
+.popup-shaded {
+   background-color: rgba(0,0,0, 0.5);
+}
+
+.popup-shaded-dark {
+   background-color: rgba(0,0,0, 0.85);
+}
+
+.popup-content {
+   position:         absolute;
+//   min-width:        $body-width / 2;
+//   max-width:        $body-width * 1.5;
+   border:           $border-size solid black;
+   border-radius:    .5em;
+   box-shadow:       0 0 1em black;
+   background-color: $bg-color;
+//   text-align:       left;
+   color:            $text-color;
+}
+
+.popup-centered {
+   top:              50%;
+   left:             50%;
+   transform:        translate(-50%, -50%);
+}
+
+
+
+.dialogbox {
+   z-index:          1337;
+
+   .dialogbox-content {
+      max-height:       100%;
+
+      .dialog-message {
+         max-width:        100%;
+         overflow-y:       auto;
+      }
+
+      .dialog-button {
+         padding:          $pad-medium $pad-normal;
+
+         div {
+            display:          inline-block;
+            vertical-align:   middle;
+//            pointer-events:   none;
+         }
+
+         span {
+            height:           100%;
+            padding-left:     $pad-medium;
+            vertical-align:   middle;
+            white-space:      nowrap;
+         }
+      }
+
+/*
+      .dialog-button:hover {
+         background-color: $control-bg-color;
+      }
+*/
+   }
+}
+
+
+
+#lightbox {
+   z-index:          31337;
+   outline:          none;
+
+   #lightbox_toolbar {
+      padding-right:    1em;
+
+      div {
+         border-radius:    .25em;
+         background-color: rgba(0, 0, 0, 0.5);
+      }
+   }
+
+   #lightbox_info {
+      margin:           1.5em;
+      border:           0.5em solid rgba(255, 255, 255, 0.4);
+      width:            40%;
+      height:           25%;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-family:      monospace;
+      white-space:      pre;
+      overflow:         auto;
+   }
+}
+
+
+
+#app_login, #app_settings {
+   z-index:          111;
+}
+
+
+
+#app_settings_content {
+
+   .section-heading {
+      display:          inline-block;
+      width:            100%;
+      padding-bottom:   $pad-medium;
+      border-bottom:    $border-size-thin solid $control-border-color;
+      margin-bottom:    $pad-normal;
+      cursor:           pointer;
+   }
+
+   div.table-cell {
+      padding:          $pad-medium 0;
+      vertical-align:   middle;
+      white-space:      nowrap;
+   }
+
+   label {
+//      padding:          $pad-normal 0;
+      white-space:      nowrap;
+   }
+
+   #settings_display_background_color {
+      width:            6em;
+   }
+
+   #settings_display_background_color_picker {
+      width:            5em;
+      height:           1.75em;
+   }
+
+   #settings_profile_avatar_preview {
+      max-width:        5em;
+   }
+}
+
+
+
+/*
+.cnv-item {
+}
+*/
+
+
+
+.media-browser-item {
+   display:          inline-block;
+   border-radius:    0.5em;
+   background-color: rgba(0, 0, 0, 0.1);
+   width:            10em;
+   margin:           0.25em;
+   padding:          0.5em;
+
+   .media-browser-item-thumbnail-container {
+      height:           10em;
+
+      .media-browser-item-thumbnail {
+         max-width:        100%;
+         max-height:       10em;
+         margin:           auto;
+      }
+   }
+
+   .media-browser-item-filename {
+      max-width:        100%;
+      margin-top:       0.5em;
+      white-space:      nowrap;
+      overflow:         hidden;
+      text-overflow:    ellipsis;
+   }
+
+   .media-browser-item-message-link {
+      width:            100%;
+      margin-top:       0.5em;
+   }
+}
+
+
+
+#app_about_content {
+   background-color: purple;
+
+   .kitten-kitten {
+      width:            100%;
+   }
+
+   .kitten-kitten-love {
+      width:            auto;
+      height:           3em;
+   }
+}
+
+
+
+.youtube-wrapper {
+   position:         relative;
+   width:            100%;
+   height:           0;
+   padding-bottom:   56.25%;  // 1.777 aspect ratio
+}
+
+.youtube-player {
+   position:         absolute;
+   top:              0;
+   left:             0;
+   width:            100%;
+   height:           100%;
+//   height:           14em;
+   border:           none;
+}
+
+.facebook-post {
+   width:            100%;
+   border:           none;
+}
+
+.instagram-post {
+   width:            100%;
+   min-height:       30em;
+   border:           none;
+}
+
+
+

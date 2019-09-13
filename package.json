@@ -1,0 +1,38 @@
+{
+   "name": "givercom",
+   "version": "4.2.0",
+   "description": "Chat with crazy people.",
+   "homepage": "https://givercom.ml",
+   "license": "AGPL-3.0-only",
+   "repository": "none",
+   "author": {
+      "name": "g4rb4g3_ju1c3",
+      "email": "garbagejuice@escm.ml",
+      "url": "https://escm.ml/g4rbage_ju1c3"
+   },
+   "keywords": [
+      "givercom",
+      "chat"
+   ],
+   "scripts": {
+      "sass": "node-sass client/sass/ -o client/assets/css/",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "main": "server/js/app.js",
+   "dependencies": {
+      "bcrypt": "^3.0.6",
+      "body-parser": "^1.19.0",
+      "child_process": "^1.0.2",
+      "cookie-parser": "^1.4.4",
+      "crypto": "^1.0.1",
+      "ejs": "^1.0.0",
+      "express": "^4.17.1",
+      "express-ws": "^4.0.0",
+      "formidable": "^1.2.1",
+      "mariasql": "^0.2.6",
+      "moment": "^2.24.0",
+      "uid-safe": "^2.1.5",
+      "uuid": "^3.3.3",
+      "web-push": "^3.3.5"
+   }
+}
