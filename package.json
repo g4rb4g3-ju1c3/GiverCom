@@ -2,13 +2,13 @@
    "name": "givercom",
    "version": "4.2.0",
    "description": "Chat with crazy people.",
-   "homepage": "https://givercom.ml",
+   "homepage": "",
    "license": "AGPL-3.0-only",
    "repository": "none",
    "author": {
-      "name": "g4rb4g3_ju1c3",
-      "email": "garbagejuice@escm.ml",
-      "url": "https://escm.ml/g4rbage_ju1c3"
+      "name": "",
+      "email": "",
+      "url": ""
    },
    "keywords": [
       "givercom",
